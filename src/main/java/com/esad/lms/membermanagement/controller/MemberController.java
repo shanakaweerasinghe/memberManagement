@@ -23,25 +23,25 @@ public class MemberController {
 	MemberService memberService;
 	
 	@GetMapping(value = "/memberList")
-	public List<Member> getBooks() {
+	public List<Member> getMember() {
 		return memberService.findAll();
 	
 	}
 	
 	@PostMapping(value = "/insertMember")
-	public void createBook(@RequestBody Member member) {
+	public void createMember(@RequestBody Member member) {
 		memberService.insertMember(member);
 	
 	}
 	@PutMapping(value = "/updateMember")
-	public void updateBook(@RequestBody Member member) {
+	public void updateMember(@RequestBody Member member) {
 		memberService.updateMember(member);
 	
 	}
 	
 	
 	@DeleteMapping(value = "/deleteMember")
-	public void deleteBook(@RequestBody Member member) {
+	public void deleteMember(@RequestBody Member member) {
 		memberService.deleteMember(member);
 	
 	}
